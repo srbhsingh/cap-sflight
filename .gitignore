@@ -40,3 +40,6 @@ dist/
 .classpath
 # .vscode/*
 # IMPORTANT: Do not exclude .vscode please!
+
+# auto generated wildcard
+gen/db/.env
