@@ -43,3 +43,6 @@ dist/
 
 # auto generated wildcard
 gen/db/.env
+credentials.json
+/s4hana_pipeline
+/deployment

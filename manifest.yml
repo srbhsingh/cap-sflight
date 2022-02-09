@@ -1,0 +1,8 @@
+applications:
+  - name: @capire/sflight
+    path: deployment/
+    buildpacks:
+      - nodejs_buildpack
+    memory: 256M
+    command: npm ci
+    random-route: true

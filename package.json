@@ -13,9 +13,14 @@
     "lint": "npx eslint .",
     "start": "cds run",
     "test": "jest",
-    "test:mocha": "npx mocha --timeout 20000"
+    "test:mocha": "npx mocha --timeout 20000",
+    "ci-build": "echo \"Use this to compile or minify your application\"",
+    "ci-package": "sap-cloud-sdk package --include=\"package.json,package-lock.json,index.js,dist/**/*\"",
+    "ci-integration-test": "echo \"Test your application and write results in a JUnit format to `s4hana_pipeline/reports/backend-integration/` and coverage in a cobertura format to `s4hana_pipeline/reports/coverage/backend-integration/`\"",
+    "ci-backend-unit-test": "echo \"Test your application and write results in a JUnit format to `s4hana_pipeline/reports/backend-unit/` and coverage in a cobertura format to `s4hana_pipeline/reports/coverage/backend-unit/`\""
   },
   "dependencies": {
+    "@sap-cloud-sdk/core": "^1.54.0",
     "@sap/audit-logging": "^5.3.0",
     "@sap/cds": "^5.7.4",
     "@sap/xssec": "^3.2.11",
@@ -25,6 +30,8 @@
     "yallist": "^4.0.0"
   },
   "devDependencies": {
+    "@sap-cloud-sdk/test-util": "^2.0.0",
+    "@sap-cloud-sdk/cli": "^0.1.12",
     "@sap/ux-specification": "^1.96.0",
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
